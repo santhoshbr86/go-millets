@@ -1,0 +1,45 @@
+<div *ngIf="product" class="productPopup">
+  
+<div class="modal-header">
+  <h4 class="modal-title">{{product.title}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button> 
+</div>
+<div class="modal-body">
+ <div class="row">
+    <div class="col-md-6 imageZoom">
+      <img src="/assets/images/{{product.img}}.jpg">
+      <!-- <ngx-image-zoom [thumbImage]="/assets/images/{{product.img}}.jpg"
+      [fullImage]="/assets/images/{{product.img}}.jpg"></ngx-image-zoom> -->
+      <!-- <div class="row justify-content-start">
+          <div class="col-md-3 badgeIcons">
+              <img src="/assets/images/{{product.img}}.jpg" width="60" height="60"> 
+          </div>
+          <div class="col-md-3 badgeIcons">
+            <img src="/assets/images/{{product.img}}.jpg" width="60" height="60"> 
+          </div>
+          <div class="col-md-3 badgeIcons">
+            <img src="/assets/images/{{product.img}}.jpg" width="60" height="60">  
+          </div>
+          <div class="col-md-3 badgeIcons">
+            <img src="/assets/images/{{product.img}}.jpg" width="60" height="60">  
+          </div>
+        </div> -->
+    </div>
+    <div class="col-md-6 description">
+      <h6>Product Details</h6>
+        <ul>
+          <li>Size: {{product.content.size}}" </li>
+          <li>Depth: {{product.content.depth}} </li>
+          <li>Shape: {{product.content.shape}} </li>
+          <li>Usage: {{product.content.usage}} </li>
+        </ul>
+    </div>
+ </div>
+ 
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>
+</div>

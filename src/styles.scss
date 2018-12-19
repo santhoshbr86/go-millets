@@ -1,1 +1,77 @@
+@mixin headerBg( $bg1, $bg2) {
+    background: linear-gradient(to right, $bg1  , $bg2 );
+}
+
 /* You can add global styles to this file, and also import other style files */
+.home{
+    padding:58px 0;
+}
+.products, .about, .contact, .checkout, .addproduct {
+    padding-top: 70px;
+}
+.bg-gray{
+    background-color:#e9ecef;
+}
+
+.breadcrumb{
+    border-radius: 0;
+    margin-bottom: 0;  
+    padding: .3rem 1rem; 
+}
+
+
+.media{
+    img {
+        width: 100px;
+        border: 1px solid #ccc;
+        height: auto;
+    }
+    .media-body{
+        h5{
+            font: 300 1.2rem Helvetica, verdana, arail;
+        }
+        p{
+            font: 300 0.9rem verdana, arail;
+            line-height: 1.6rem;
+        }
+    }
+}
+// header title style
+.header{
+    @include headerBg(#4e9e1c, #343a40);
+    padding-bottom: 10px;
+    .breadcrumb{
+        background:none;
+        padding-left:0;
+        .breadcrumb-item{
+           a{ color:#fff;
+              &:hover{
+                text-decoration:none;
+                color:#fff;
+            }
+        }
+          &+::before{
+                content: '->';
+                color:#fff;
+            }
+            &.active {
+                color:#fff;
+            }
+        }
+    }
+    h2{
+        padding-top: 50px;
+       color: #fff;
+    }
+}
+
+// Modal Animation
+.modal-holder{
+    animation-name: modalAnimation;
+    animation-duration: 0.7s;
+  }
+  
+  @keyframes modalAnimation {
+    0%   {transform: scale(0.6)}
+    100% {transform: scale(1)}
+  }

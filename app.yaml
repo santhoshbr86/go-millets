@@ -1,0 +1,9 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+- url: /
+  static_files: millets-mart/index.html
+  upload:  millets-mart/index.html
+- url: /
+  static_dir:  millets-mart

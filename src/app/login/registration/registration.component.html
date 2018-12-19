@@ -1,0 +1,47 @@
+<header class="modal-header">
+  <h4 class="modal-title">Registration</h4>
+<button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+</button>
+</header>
+<section class="modal-body">
+    <form [formGroup]="registerForm" novalidate>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Email as username</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="username" formControlName="email">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Phone Number</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="phone number" formControlName="phone">
+      </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput3">Password</label>
+          <input type="password" class="form-control" id="formGroupExampleInput3" placeholder="password" formControlName="password">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput4">Confirm Password</label>
+            <input type="password" class="form-control" id="formGroupExampleInput4" placeholder="confirm password" formControlName="confirmPass">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput5">Postal Address</label>
+          <textarea class="form-control" id="formGroupExampleInput5" placeholder="Postal Address" formControlName="address"></textarea>
+      </div>
+        <button type="submit" class="btn btn-primary mb-2" (click)="signup()">Sign Up</button>
+       
+      </form>
+<!-- <form class="form-inline login" [formGroup]="loginForm">
+  <div class="input-group mb-2 mr-sm-2">
+    <input type="text" class="form-control" id="inlineFormInputName2" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" formControlName="username" placeholder="Email as username">
+    <div class="errors" *ngIf=" submitted && f.username.errors.required">Username is required</div>
+  </div>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="password" class="form-control" id="inlineFormInputGroupUsername2" formControlName="password" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+      <div class="errors" *ngIf="submitted && f.password.errors.required"> Password is required</div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary mb-2" (click)="login()">Submit</button>
+</form> -->
+</section>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>

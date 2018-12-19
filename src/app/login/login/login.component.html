@@ -1,0 +1,23 @@
+<header class="modal-header">
+    <h4 class="modal-title">Login</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+  </button>
+</header>
+<section class="modal-body">
+  <form class="form-inline login" [formGroup]="loginForm">
+      <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" id="inlineFormInputName2" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" formControlName="username" placeholder="Email as username">
+      <div class="errors" *ngIf=" submitted && f.username.errors.required">Username is required</div>
+    </div>
+      <div class="input-group mb-2 mr-sm-2">
+        <input type="password" class="form-control" id="inlineFormInputGroupUsername2" formControlName="password" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+        <div class="errors" *ngIf="submitted && f.password.errors.required"> Password is required</div>
+      </div>
+    
+      <button type="submit" class="btn btn-primary mb-2" (click)="login()">Submit</button>
+  </form>
+</section>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>

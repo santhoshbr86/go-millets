@@ -1,0 +1,73 @@
+<div class="container addproduct">
+  <div class="row">
+      <div classs="col-md-4">
+        <form class="login" [formGroup]="addProductForm">
+          <div class="form-group mb-2 mr-sm-2">
+            <label for="title">Title</label>
+              <input type="text" class="form-control" id="title" formControlName="title" placeholder="Enter product title">
+          </div>
+          <div class="form-group mb-2 mr-sm-2" formGroupName="content">
+            <label for="content">Product Content</label>
+              <input id="content" type="text" class="form-control" formControlName="size" placeholder="size" >
+              <input type="text" class="form-control" formControlName="depth" placeholder="depth" >
+              <input type="text" class="form-control" formControlName="shape" placeholder="shape" >
+              <input type="text" class="form-control" formControlName="usage" placeholder="usage" >
+          </div>
+          <div class="form-group mb-2 mr-sm-2">
+              <label for="content">Product category</label>
+            <input type="text" class="form-control"  formControlName="cat" placeholder="Product category" >
+          </div>
+          <div class="form-group mb-2 mr-sm-2">
+              <label for="content">Product Type</label>
+            <input type="text" class="form-control"  formControlName="type" placeholder="Product Type" >
+          </div>
+          <div class="form-group mb-2 mr-sm-2">
+              <label for="content">Product image</label>
+              <input type="text" class="form-control"  formControlName="img" placeholder="Product image Name" >
+          </div>
+          <div class="form-group mb-2 mr-sm-2">
+              <label for="content">Product quantity In</label>
+              <select class="form-control"  formControlName="qtyIn">
+                  <option value="kgs">kgs</option>
+                  <option value="pcs"selected>pcs</option>
+              </select>
+          </div>
+          <div class="form-group mb-2 mr-sm-2">
+              <label for="content">Product cost per Qty</label>
+              <input type="text" class="form-control"  formControlName="cost" placeholder="Product cost per Qty" >
+          </div>
+          <div class="form-group mb-2 mr-sm-2">
+              <label for="content">Product Available Limit</label>
+              <input type="text" class="form-control"  formControlName="stock" placeholder="Product Available Limit" >
+          </div>
+        <button type="submit" class="btn btn-primary mb-2" (click)="addproduct()">Submit</button>
+      </form>
+      </div>
+      <div class="col-md-8">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Sl.no</th>
+              <th scope="col">Title</th>
+              <th scope="col">Stock</th>
+              <th scope="col">Type</th>
+              <th scope="col">Cost</th>
+              <th scope="col">Image</th>
+              <th>Opps</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of productsList; let i=index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{product.title}}</td>
+              <td>{{product.stock}}</td>
+              <td>{{product.cat}}</td>
+              <td>{{product.cost}}</td>
+              <td><img src="/assets/images/{{product.img}}.jpg"></td>
+              <td><button class="btn btn-primary" (click)="upadateProduct(product)">update</button>, <button class="btn btn-danger" (click)="deleteProduct(product._id)">Delete</button></td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+.products {
+    .productSection{
+        padding-top:30px;
+        .product {
+            padding-bottom:20px;
+         }
+    }
+    .filters {
+        padding: 0px 0px;
+        box-shadow: 1px -1px 1px 1px #ccc;
+    }
+}
+.nav{
+    .nav-link{
+        color:#fff;
+        padding:5px 1.3rem;
+    }
+}
+.header{
+    background: url(/assets/images/banner-2.jpg) -7px -81px no-repeat;
+    width: 100%;
+    height: 200px;
+    .breadcrumb{
+        background: none;
+        padding:0;
+        .breadcrumb-item{
+            a{
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            &+::before{
+                content: '->';
+                color:#5ec420;
+            }
+            &.active{
+                color:#5ec420;
+            }
+        }
+    }
+    h5 {
+        color: #fff;
+        font-size: 30px;
+        padding-top: 120px;
+    }
+}

@@ -1,0 +1,16 @@
+<div class="card"> 
+     <!-- <h6 class="card-title">{{product.title}}</h6> -->
+   
+    <div class="card-body">
+            <img class="card-img-top" src="/assets/images/{{product.img}}.jpg" alt="product caption">  
+            <div class="card-hover flex-column justify-content-center align-items-center">
+                <div class="">{{product.content.shape}} {{product.content.size}}" </div>   
+                <div class="zoomout"  (click)="openModal(product)"><img src="/assets/images/svg/screen-full.svg"></div>               
+        </div>       
+    </div>
+    <div class="card-footer right">
+         <span class="title">{{product.content.shape}}</span>
+         <button class="btn btn-addToCard" (click)="addtoCart(product)">Buy Now</button>
+    </div>
+    
+</div>

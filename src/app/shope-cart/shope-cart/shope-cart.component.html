@@ -1,0 +1,45 @@
+<div class="container shopeCart">
+  <header class="row">
+      <div class="col-md-12">
+        <h1>Shope cart</h1>
+      </div>
+  </header>
+  <div class="row">
+    <div class="col-md-12">
+        <ng-container *ngIf="cartItems">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let item of cartItems">
+                            
+                            <img class="card-img-left col-md-2" src="/assets/images/{{item.img}}.jpg" alt="product caption"> 
+                            <div class="card-body col-md-8">
+                                    <h6>{{item.title}}</h6>
+                                    <form>
+                                        
+                                        <div class="input-group">
+                                                <label class="control-label">Quantity:</label>
+                                                <input type="text" [(ngModel)]="item.qty"  name="qty" (blur)="itemsCost()"/> * {{item.cost}}
+                                        </div>
+                                            {{item.qty*item.cost}}
+                                    </form>
+                            </div>
+                            <div class="actions col-md-2">
+                                <button class="btn btn-warning">Remove</button>
+                            </div>
+                    </li>
+                </ul>
+        </ng-container>
+       
+      </div>
+     </div>
+    <section class="row">
+            <div class="col-md-2">
+                <h6>Total Cost</h6>
+            </div>
+            <div class="col-md-8">
+                <strong>{{this.total}}</strong>
+            </div>
+            <div class="col-md-2">   
+            <button class="btn btn-primary" (click)="CheckoutItems()">Processed to Checkout</button>
+              </div>
+    </section>
+</div>

@@ -1,0 +1,95 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "title": "Rounded Areca plates - 10 inch",
+            "content": {
+                "size": "10.0",
+                "depth": "1.6\"",
+                "shape": "rounded",
+                 "usage": "Used for serving meals, rolls, burgers"
+            },
+            "type": "Areka Plates",
+            "cat":"areca",
+            "img":"10-plate-round"
+        },
+        {
+            "id": "2",
+            "title": "Rounded Areca plates - 12 inch",
+            "content": {
+                "size": "12",
+                "depth": "1.6\"",
+                "shape": "rounded",
+                 "usage": "Used for serving meals, rolls, burgers"
+            },
+            "type": "Areka Plates",
+            "cat":"areca",
+            "img":"12-plate-round"
+        },
+        {
+            "id":"3",
+            "title": "Rounded Areca plates - 6 inch",
+            "content": {
+                "size": "6",
+                "depth": "1.6\"",
+                "shape": "rounded",
+                 "usage": "Used for serving rolls, burgers"
+            },
+            "type": "Areka Plates",
+            "cat":"areca",
+            "img":"6-plate-round"
+        },
+        {
+            "id":"4",
+            "title": "Square compartments Areca plates - 12 inch",
+            "content": {
+                "size": "12",
+                "depth": "1.5\"",
+                "shape": "Square compartments",
+                 "usage": "Used for serving meals, rolls, burgers"
+            },
+            "type": "Areka Plates",
+            "cat":"areca",
+            "img":"12-square-compartment"
+        }, 
+        {
+            "id":"5",
+            "title": "Bowls-large - 12 inch",
+            "content": {
+                "size": "12",
+                "depth": "1.6\"",
+                "shape": "rounded",
+                 "usage": "Used for serving, noodles, rice bowls, burgers"
+            },
+            "type": "Areka Bowls",
+            "cat":"areca",
+            "img": "12-bowl-round"
+        },
+        {
+            "id":"6",
+            "title": "Bowls-Medium - 8 inch",
+            "content": {
+                "size": "8\" diameter",
+                "depth": "1.6",
+                "shape": "rounded",
+                 "usage": " used for, fries, burgers, can used for carry out"
+            },
+            "type": "Areka Bowls",
+            "cat":"areca",
+            "img": "8-bowl-round"
+        },
+        {
+            "id":"7",
+            "title": "Bowls-small - 5 inch",
+            "content": {
+                "size": "5\"",
+                "depth": "1.6",
+                "shape": "rounded",
+                 "usage": "Used for serving soops, curries, fries"
+            },
+            "type": "Areka Bowls",
+            "cat":"areca",
+            "img": "5-bowl-round"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "title": "circle Areca plates - 10 inch",
+            "content": "This is coming soon"
+        },
+        {
+            "id": "2",
+            "title": "Square Areca plates - 10 inch",
+            "content": "This is coming soon"
+        },
+        {
+            "id":"3",
+            "title": "Square with compartments Areca plates - 10 inch",
+            "content": "this is coming soon"
+        },                                                                  
+        {
+            "id":"4",
+            "title": "Bowls-large - 10 inch",
+            "content": "this is coming soon"
+        }
+    ]
+}

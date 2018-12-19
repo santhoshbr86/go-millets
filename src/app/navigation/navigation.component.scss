@@ -1,0 +1,61 @@
+$bg-vicks:#343a40;
+.bg-vicks{
+  //  background-image: url(../../assets/images/images/bg-nav.png) 0 0;
+    background-color: $bg-vicks;
+}
+.navbar{
+    padding:0;
+}
+.navbar-brand {
+    position: relative;
+}
+
+.navbar-nav{
+    .nav-item{
+        .nav-link{
+            position: relative;
+            color:#5ec420;
+            cursor: pointer;
+            padding: 23px 1.2rem;
+            transition: all 1s;
+         
+           &:hover{
+                color:#fff;
+                background:#5ec420;
+            }
+            &.active{
+                &::before{
+                    content: '';
+                    width: 90%;
+                    height: 100%;
+                    border-bottom: 2px solid #5ec420;
+                    position: absolute;
+                    top: -15px;
+                    left: 5%;
+                }
+            }
+        }
+    }
+}
+.nav-link-login { }
+.loginandRegister, .logedInUser {
+    position: fixed;
+    right: 5px;
+    top: 10px;
+    text-transform: capitalize;
+    color: #5ec420;
+    display: flex;
+    a {
+        display: inline-flex;
+        color: #5ec420;
+        padding-right: 10px;
+    }
+    
+}
+.tagline{
+    position: absolute;
+    bottom: 0;
+    left: 54px;
+    color: #5ec420;
+    font: 300 9px cursive, Arial, verdana;
+}

@@ -1,0 +1,18 @@
+.list-group{
+
+    padding-top:10px;
+    .list-group-item{
+        border:none;
+        .custom-control-label{
+           &::before{
+               color:#fff;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 0;
+           }
+        }
+    }
+}
+.productFilters{
+    
+}

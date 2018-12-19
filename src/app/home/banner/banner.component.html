@@ -1,0 +1,20 @@
+<div class="banner">
+   
+         <ngb-carousel *ngIf="images">
+            <ng-template ngbSlide *ngFor="let img of images">
+              <img [src]="img" alt="Random first slide">
+              <div class="carousel-caption">
+                <!-- <h3>slide label</h3>
+                <p>Write some discription about this about slide</p> -->
+              </div>
+            </ng-template>
+        </ngb-carousel>
+    
+    <!-- /.col-lg-8 -->
+    <!-- <div class="col-lg-4">
+      <h1>Areka and Millet marts</h1>
+      <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
+      <a class="btn btn-primary btn-lg" routerLink="/products">more info...</a>
+    </div> -->
+    <!-- /.col-md-4 -->
+  </div>
